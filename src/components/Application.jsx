@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
+import '../App.css';
 import Posts from './Posts';
+import { firestore } from '../firebase';
 
 class Application extends Component {
   state = {
@@ -46,7 +47,7 @@ class Application extends Component {
 
     return (
       <main>
-        <h1>Think Piece</h1>
+        <h1 className='think-red'>Think Piece</h1>
         <Posts posts={posts} onCreate={this.handleCreate} />
       </main>
     );
